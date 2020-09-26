@@ -1,0 +1,25 @@
+.signin {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: yellowgreen;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    text-align: center;
+
+}
+.greeting {
+        margin: 20px auto;
+    }
+
+form {
+
+    padding: 20px;
+
+    .label, .input {
+        padding: 10px;
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+}
