@@ -21,9 +21,6 @@ function Home () {
 
     return (
         <>
-            {
-                modalIsOpen ? <ImgDetails id={target}/> : null
-            }
             <Nav />
             <div className="gallery">
                 <ul className="itemList">
@@ -39,6 +36,13 @@ function Home () {
                     )}
                 </ul>
             </div>
+                {
+                modalIsOpen ?
+                <div className="modalContainer">
+                    <ImgDetails id={target}/>
+                </div>
+                : null
+                }
         </>
     )
 }

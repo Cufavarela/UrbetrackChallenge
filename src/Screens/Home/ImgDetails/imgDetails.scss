@@ -12,6 +12,7 @@
         color: $primary;
         padding: 10px;
         position: relative;
+        box-shadow: rgba(0, 0, 0, .3) 2px 2px 5px;
 
 
         img {
@@ -52,11 +53,32 @@
             padding: 4px 8px;
             border-radius: 50%;
             transition: ease-in-out 400ms;
+            text-decoration: none;
 
             &:hover {
                 cursor: pointer;
                 background-color: $primary;
                 color: white;
+            }
+        }
+    }
+    @include atDarkTheme {
+        .detailsContainer {
+            background-color: black;
+            color: $secondary;
+            a {
+                color: $secondary;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            .closeModal {
+                color: black;
+                background-color: $secondary;
+                &:hover {
+                    color: $secondary;
+                    background-color: black;
+                }
             }
         }
     }
