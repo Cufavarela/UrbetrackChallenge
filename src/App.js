@@ -10,6 +10,8 @@ function App() {
 
   const loggedIn = useSelector(state => state.loggedIn);
 
+  console.log(loggedIn);
+
   return (
       <BrowserRouter>
         <Switch>

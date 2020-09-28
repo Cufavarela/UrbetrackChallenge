@@ -12,9 +12,6 @@ function Nav () {
 
     const dispatch = useDispatch();
 
-
-    console.log(loggedIn);
-
     const logOffHandler = () => {
         dispatch(logOut());
     };
@@ -28,7 +25,7 @@ function Nav () {
             <div>Darkmode</div>
         </div>
         <Link to="/">
-            <button className="button is-rounded">Salir</button>
+            <button className="button is-rounded">Home</button>
         </Link>
         <div className="logOut">
             <button className="button is-rounded" onClick={logOffHandler}>Salir</button>
