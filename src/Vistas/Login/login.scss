@@ -1,25 +1,55 @@
+@import '../../variables.scss';
+
+.background {
+    background-image: url('../../images/Background.svg');
+}
+
 .signin {
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    background-color: yellowgreen;
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    max-width: 500px;
+    height: 100vh;
+    margin: 0px auto;
+    padding-top: 50px;
+    background-color: $primary;
     text-align: center;
+}
+
+.greeting {
+    h1, h2 {
+        color: white;
+    }
+    .fail {
+        color: red;
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+    }
 
 }
-.greeting {
-        margin: 20px auto;
-    }
 
 form {
 
     padding: 20px;
 
-    .label, .input {
+    .label {
         padding: 10px;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .input {
+        padding: 10px;
+        color: black;
+        letter-spacing: 1px;
     }
 
     .button {
         margin-top: 20px;
+        font-weight: 500;
+        &:hover {
+            border: white 1px solid;
+            background-color: $primary;
+            color: white;
+        }
     }
 }

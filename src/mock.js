@@ -1,12 +1,12 @@
 const mock =
 [
     {
-        "id": "0",
-        "author": "Alejandro Escamilla",
-        "width": 500,
-        "height": 500,
-        "url": "https://unsplash.com/photos/yC-Yzbqy7PY",
-        "download_url": "https://picsum.photos/id/0/500/500"
+    "id": "0",
+    "author": "Alejandro Escamilla",
+    "width": 500,
+    "height": 500,
+    "url": "https://unsplash.com/photos/yC-Yzbqy7PY",
+    "download_url": "https://picsum.photos/id/0/500/500"
     },
     {
     "id": "1012",

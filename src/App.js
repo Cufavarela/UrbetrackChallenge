@@ -3,23 +3,29 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.scss';
 import Login from './Vistas/Login/Login';
 import Home from './Vistas/Home/Home';
-import ImgDetailsContainer from './Vistas/Home/ImgDetailsContainer'
+import ImgDetails from './Vistas/Home/ImgDetailsContainer';
+import {useSelector} from 'react-redux';
 
 function App() {
+
+  const loggedIn = useSelector(state => state.loggedIn);
+
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/fotos/:id">
-          <ImgDetailsContainer />
-        </Route>
-        <Route path="/fotos">
-          <Home />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/:id">
+            <ImgDetails />
+          </Route>
+          <Route path="/">
+          {
+            loggedIn ?
+              <Home />
+            :
+              <Login />
+          }
+          </Route>
+        </Switch>
+      </BrowserRouter>
   );
 }
 

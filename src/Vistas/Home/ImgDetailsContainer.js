@@ -13,7 +13,6 @@ function ImgDetailsContainer () {
         for (let i=0; i < mock.length; i++) {
             if (mock[i].id === id) {
                 setFoto(mock[i]);
-                console.log(mock);
             }
         }
     },[]);
