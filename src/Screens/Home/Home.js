@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import mock from '../../mock';
 import './home.scss';
-import Nav from '../Nav/Nav';
+import Nav from './Nav/Nav';
 
 
 function Home () {

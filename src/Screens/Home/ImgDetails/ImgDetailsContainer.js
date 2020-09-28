@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
-import mock from '../../mock';
+import mock from '../../../mock';
 import ImgDetails from './ImgDetails';
 import './imgDetails.scss';
 

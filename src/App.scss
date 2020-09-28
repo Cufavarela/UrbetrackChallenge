@@ -1,13 +1,16 @@
 
-@import './variables.scss';
+@import './variables&mixins.scss';
 
-@import '../node_modules/bulma/bulma.sass';
 
-.App {
+.goDarkContainer {
+  margin: auto;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   text-align: center;
 }
-
-
 
 
 

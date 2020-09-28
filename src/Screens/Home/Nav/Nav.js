@@ -1,14 +1,14 @@
 import React from 'react';
 import './nav.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from '../../redux/userActions';
+import { logOut } from '../../../Redux/userActions';
 import { Link } from 'react-router-dom';
 
 
 function Nav () {
 
-    const user = useSelector(state => state.user);
-    const loggedIn = useSelector(state => state.loggedIn);
+    const user = useSelector(state => state.User.user);
+    const loggedIn = useSelector(state => state.User.loggedIn);
 
     const dispatch = useDispatch();
 
@@ -20,9 +20,6 @@ function Nav () {
     <aside className="has-background-primary aside">
         <div className="usuario">
             {user}
-        </div>
-        <div className="toggle">
-            <div>Darkmode</div>
         </div>
         <Link to="/">
             <button className="button is-rounded">Home</button>
