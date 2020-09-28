@@ -40,5 +40,15 @@ $secondary: #72787b;
         color: white;
         cursor: pointer;
     }
+    @include atDarkTheme {
+        background-color: $secondary;
+        color: black;
+        border: black 1px solid;
+        &:hover {
+            background-color: black;
+            color: $secondary;
+        }
+
+    }
 
 }

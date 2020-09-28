@@ -17,15 +17,15 @@ function Nav () {
     };
 
     return (
-    <aside className="has-background-primary aside">
-        <div className="usuario">
+    <aside className="asideMenu">
+        <div className="user">
             {user}
         </div>
-        <Link to="/">
-            <button className="button is-rounded">Home</button>
-        </Link>
-        <div className="logOut">
-            <button className="button is-rounded" onClick={logOffHandler}>Salir</button>
+        {/* <Link to="/">
+            <button className="button">Home</button>
+        </Link> */}
+        <div className="logOutContainer">
+            <a className="logOut" onClick={logOffHandler}><span>👋</span>Cerrar Sesión</a>
         </div>
     </aside>
     )
