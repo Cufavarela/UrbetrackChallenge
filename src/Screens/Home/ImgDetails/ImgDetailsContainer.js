@@ -4,14 +4,14 @@ import mock from '../../../mock';
 import ImgDetails from './ImgDetails';
 import './imgDetails.scss';
 
-function ImgDetailsContainer () {
+function ImgDetailsContainer (id) {
 
-    const {id} = useParams();
     const [foto, setFoto] = useState({});
+    const idValue = id.id;
 
     useEffect(() => {
         for (let i=0; i < mock.length; i++) {
-            if (mock[i].id === id) {
+            if (mock[i].id === idValue) {
                 setFoto(mock[i]);
             }
         }

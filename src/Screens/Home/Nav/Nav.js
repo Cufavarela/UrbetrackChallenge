@@ -18,12 +18,7 @@ function Nav () {
 
     return (
     <aside className="asideMenu">
-        <div className="user">
-            {user}
-        </div>
-        {/* <Link to="/">
-            <button className="button">Home</button>
-        </Link> */}
+        <div className="user">{user}</div>
         <div className="logOutContainer">
             <a className="logOut" onClick={logOffHandler}><span>👋</span>Cerrar Sesión</a>
         </div>
