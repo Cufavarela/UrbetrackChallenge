@@ -32,10 +32,6 @@
     }
     @include atDarkTheme {
         background-color: black;
-        .user {
-            color: $secondary;
-            text-shadow: .5px .5px rgba(0, 0, 0, 0.596);
-        }
         .logOutContainer {
             .logOut {
             color: $secondary;

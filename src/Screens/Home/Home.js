@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {Link} from 'react-router-dom';
 import './home.scss';
 import Nav from './Nav/Nav';
-import ImgDetails from './ImgDetails/ImgDetailsContainer';
+import ImgDetails from './ImgDetails/ImgDetails';
 import { ModalContext } from '../../Contexts/modalContext';
 import { getPhotos } from '../../Redux/photosActions';
 
@@ -12,10 +12,10 @@ function Home () {
 
     const [modalIsOpen, setModalIsOpen] = useContext(ModalContext);
 
-    const [target, setTarget] = useState({});
+    const [target, setTarget] = useState({id: '', url: '', author: '', src: '', width: 0, height: 0});
 
-    const pasarId = (id) => {
-        setTarget(id);
+    const getOnePhoto = (obj) => {
+        setTarget(obj);
         setModalIsOpen(true);
     }
 
@@ -39,7 +39,7 @@ function Home () {
                 <ul className="itemList">
                 {photos.map(foto =>
                         <li className="item" key={foto.id}>
-                            <Link to={"/" + foto.id} onClick={() => pasarId(foto.id)}>
+                            <Link to={"/" + foto.id} onClick={() => getOnePhoto(foto)}>
                                 <img src={foto.download_url}></img>
                                 <div className="authorContainer">
                                     <h2 className="author">{foto.author}</h2>
@@ -53,13 +53,13 @@ function Home () {
                 </ul>
             </div>
             }
-                {
-                modalIsOpen ?
-                <div className="modalContainer">
-                    <ImgDetails id={target}/>
-                </div>
-                : null
-                }
+            {
+            modalIsOpen ?
+            <div className="modalContainer">
+                <ImgDetails photo={target}/>
+            </div>
+            : null
+            }
         </>
     )
 }

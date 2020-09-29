@@ -23,7 +23,7 @@ function Login () {
             dispatch(setUser(name));
 
         } else {
-            document.getElementById('fail').classList.add('visible')
+            document.getElementById('password').classList.add('fail');
         }
     };
 
@@ -32,7 +32,6 @@ function Login () {
             <div className="greeting">
                 <h1>Hola!</h1>
                 <h2>Iniciá sesión para continuar</h2>
-                <h2 id="fail" className="fail">Contraseña inválida</h2>
             </div>
             <form onSubmit={submitHandler}>
                 <input className="input" placeholder="Nombre" type="text" id="name" name="name" onChange={(e) => setName(e.target.value)}></input>

@@ -11,3 +11,4 @@ export const getPhotos = ( limit = 7) => async (dispatch, getState) => {
     dispatch ({ type: GET_PHOTOS, payload: data } )
 
 }
+

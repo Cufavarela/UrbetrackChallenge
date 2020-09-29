@@ -1,13 +1,15 @@
 @import '../../../variables&mixins.scss';
 
 .detailsModal {
-    background-color: rgba(117, 117, 117, 0.671);
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.473);
     height: 100vh;
-    padding: 20px;
 
     .detailsContainer {
-        max-width: 500px;
-        margin: auto;
+        max-width: 600px;
+        margin: 20px auto;
         background-color: white;
         color: $primary;
         padding: 10px;
