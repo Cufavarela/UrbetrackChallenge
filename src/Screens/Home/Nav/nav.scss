@@ -31,14 +31,14 @@
         }
     }
     @include atDarkTheme {
-        background-color: $secondary;
+        background-color: black;
         .user {
-            color: $primary;
+            color: $secondary;
             text-shadow: .5px .5px rgba(0, 0, 0, 0.596);
         }
         .logOutContainer {
             .logOut {
-            color: black;
+            color: $secondary;
             &:hover {
                 color: $primary;
             }

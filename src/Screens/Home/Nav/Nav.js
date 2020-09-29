@@ -2,7 +2,7 @@ import React from 'react';
 import './nav.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from '../../../Redux/userActions';
-import { Link } from 'react-router-dom';
+import DarkButton from '../../../Components/DarkButton';
 
 
 function Nav () {
@@ -22,6 +22,7 @@ function Nav () {
         <div className="logOutContainer">
             <a className="logOut" onClick={logOffHandler}><span>👋</span>Cerrar Sesión</a>
         </div>
+        <DarkButton />
     </aside>
     )
 }
