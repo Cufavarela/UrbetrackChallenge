@@ -9,27 +9,23 @@
     text-align: center;
 
     .greeting {
-        h1, h2 {
+        h1 {
             color: white;
             letter-spacing: 1px;
+            font-family: 'Roboto';
+
         }
     }
     @include atDarkTheme {
         background-color: black;
-        .greeting {
-            h1, h2 {
-                color: $secondary;
-            }
-            .fail {
-                color: red;
-            }
-        }
     }
 
     form {
         padding: 20px;
         display: flex;
         flex-direction: column;
+        font-family: 'Nunito';
+
 
         .input {
             padding: 10px;
@@ -60,6 +56,42 @@
                 border: 1px solid white;
             }
         }
+    }
+}
+.signature {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        img {
+            width: 150px;
+            margin-left: 15px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    h2 {
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-family: 'Roboto';
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: salmon;
+                cursor: pointer;
+            }
+        }
+
     }
 }
 

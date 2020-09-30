@@ -10,9 +10,8 @@ function ImgDetails (photo) {
 
     const [modalIsOpen, setModalIsOpen] = useContext(ModalContext);
 
-
     return (
-        <div className="detailsModal">
+        <Link to="/"><div onClick={() => setModalIsOpen(false)} className="detailsModal">
             <div className="detailsContainer">
                 <Link onClick={() => setModalIsOpen(false)} to="/" className="closeModal"> X </Link>
                 <img src={onePhoto.download_url}></img>
@@ -22,7 +21,7 @@ function ImgDetails (photo) {
                     <a target="blank" href={onePhoto.url}><h2>Descargar</h2></a>
                 </div>
             </div>
-        </div>
+        </div></Link>
     )
 }
 

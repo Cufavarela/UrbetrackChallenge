@@ -18,12 +18,16 @@
         font-weight: 700;
         letter-spacing: 1px;
         margin: 20px auto;
+        font-family: 'Roboto';
+
     }
 
     .logOutContainer {
         .logOut {
             font-size: 12px;
             color: $secondary;
+            font-family: 'Nunito';
+
             &:hover{
                 color: white;
                 cursor: pointer;

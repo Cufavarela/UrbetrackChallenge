@@ -37,9 +37,16 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: $secondary;
                 font-size: 50px;
                 cursor: pointer;
+                transition: ease-in-out 400ms;
+                background-color: $secondary;
+
+                &:hover {
+                    background-color: $primary;
+                    font-size: 53px;
+                }
+
             }
 
             a {
@@ -57,6 +64,7 @@
                     .author {
                         font-size: 20px;
                         letter-spacing: 1px;
+                        font-family: 'Roboto';
                     }
                 }
 

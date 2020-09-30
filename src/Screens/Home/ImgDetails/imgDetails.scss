@@ -30,14 +30,17 @@
 
             .author {
                 font-size: 18px;
+                font-family: 'Roboto';
             }
             .size {
                 font-size: 13px;
+                font-family: 'Nunito';
             }
             a {
                 text-decoration: none;
                 h2 {
                     font-size: 15px;
+                    font-family: 'Roboto';
                 }
                 &:hover {
                     color: $secondary;
@@ -56,6 +59,8 @@
             border-radius: 50%;
             transition: ease-in-out 400ms;
             text-decoration: none;
+            font-family: 'Roboto';
+
 
             &:hover {
                 cursor: pointer;

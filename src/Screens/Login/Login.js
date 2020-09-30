@@ -3,6 +3,7 @@ import './login.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from '../../Redux/userActions';
 import DarkButton from '../../Components/DarkButton';
+import urbeLogo from '../../Images/urbetrack.png';
 
 
 function Login () {
@@ -30,14 +31,17 @@ function Login () {
     return <div className="bg-image">
         <div className="signin">
             <div className="greeting">
-                <h1>Hola!</h1>
-                <h2>Iniciá sesión para continuar</h2>
+                <h1>¡Bienvenid@!</h1>
             </div>
             <form onSubmit={submitHandler}>
                 <input className="input" placeholder="Nombre" type="text" id="name" name="name" onChange={(e) => setName(e.target.value)}></input>
                 <input className="input" placeholder="Password" type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}></input>
                 <button className="button" type="submit" >Ingresar</button>
             </form>
+        </div>
+        <div className="signature">
+            <h2>Ejercicio de <a target="blank" href="https://www.linkedin.com/in/facuvarela/">Facundo Varela</a> para</h2>
+            <a href="https://urbetrack.com/"><img src={urbeLogo}></img></a>
         </div>
         <DarkButton />
     </div>
