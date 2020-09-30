@@ -11,6 +11,7 @@
 
 
 .gallery {
+    min-height: 100vh;
 
     .itemList {
         display: grid;
@@ -22,6 +23,7 @@
         padding: 20px;
         padding-left: 190px;
         list-style-type: none;
+        box-sizing: border-box;
 
         .item {
             position: relative;

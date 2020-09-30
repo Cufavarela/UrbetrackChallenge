@@ -1,4 +1,4 @@
-import { GET_PHOTOS } from './photosActions';
+import { GET_PHOTOS, GET_PHOTOS_ERROR } from './photosActions';
 
 const Photos = (state = {}, action) => {
 
@@ -11,6 +11,11 @@ const Photos = (state = {}, action) => {
             loading: false,
             page: state.page + 1
         }
+        case GET_PHOTOS_ERROR:
+            return {
+                photos: {},
+                loading: true,
+            }
         default: return state
     }
 }

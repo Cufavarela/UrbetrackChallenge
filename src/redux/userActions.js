@@ -1,9 +1,9 @@
 
 
-const setUser = (userObj) => {
+const setUser = (name) => {
     return {
         type: "SET_USER",
-        payload: userObj
+        payload: name
     }
 }
 

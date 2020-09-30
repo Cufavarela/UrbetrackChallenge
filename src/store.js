@@ -5,7 +5,7 @@ import ThemeReducer from './Redux/themeReducer';
 import photosReducer from './Redux/photosReducer';
 
 const inicialState = {
-    User: {user: {}, loggedIn: false},
+    User: { user: localStorage.getItem('user') || '', loggedIn: localStorage.getItem('user') ? true : false },
     Theme: { darkTheme: false },
     Photos: { photos: [], loading: true, page: 1 }
 };
