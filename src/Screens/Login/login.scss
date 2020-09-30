@@ -1,0 +1,98 @@
+@import '../../variables&mixins.scss';
+
+.signin {
+    max-width: 500px;
+    height: 100%;
+    margin: 0px auto;
+    padding-top: 50px;
+    background-color: $primary;
+    text-align: center;
+
+    .greeting {
+        h1 {
+            color: white;
+            letter-spacing: 1px;
+            font-family: 'Roboto';
+
+        }
+    }
+    @include atDarkTheme {
+        background-color: black;
+    }
+
+    form {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Nunito';
+
+
+        .input {
+            padding: 10px;
+            color: black;
+            letter-spacing: 1px;
+            border: none;
+            outline: none;
+            margin: 20px 0px;
+
+            &.fail {
+                background-color: rgb(255, 158, 158);
+                box-shadow: 0px 0px 10px 1px red;
+            }
+
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+        .button {
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        @include atDarkTheme {
+            .input {
+                background-color: black;
+                color: lighten($secondary, 5);
+                border: 1px solid white;
+            }
+        }
+    }
+}
+.signature {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        img {
+            width: 150px;
+            margin-left: 15px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    h2 {
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-family: 'Roboto';
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: salmon;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+

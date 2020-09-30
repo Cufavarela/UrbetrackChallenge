@@ -1,33 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.scss';
-import Login from './Vistas/Login/Login';
-import Home from './Vistas/Home/Home';
-import ImgDetails from './Vistas/Home/ImgDetailsContainer';
-import {useSelector} from 'react-redux';
+import Login from './Screens/Login/Login';
+import Home from './Screens/Home/Home';
+import {useSelector, useDispatch} from 'react-redux';
+import {ModalContext} from './Contexts/modalContext';
+
 
 function App() {
 
-  const loggedIn = useSelector(state => state.loggedIn);
+  const loggedIn = useSelector(state => state.User.loggedIn);
+  const isDark = useSelector(state => state.Theme.darkTheme);
+  const dispatch = useDispatch();
 
-  console.log(loggedIn);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
+    <ModalContext.Provider value={[modalIsOpen, setModalIsOpen]}>
+    <main className={`${ isDark ? 'darkMode' : ''}`}>
       <BrowserRouter>
         <Switch>
-          <Route path="/:id">
-            <ImgDetails />
-          </Route>
           <Route path="/">
           {
             loggedIn ?
-              <Home />
+            <Home />
             :
-              <Login />
+            <Login />
           }
           </Route>
         </Switch>
       </BrowserRouter>
+    </main>
+    </ModalContext.Provider>
   );
 }
 

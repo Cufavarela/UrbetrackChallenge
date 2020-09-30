@@ -5,4 +5,11 @@ const goDark = () => {
     }
 }
 
-export default goDark;
+const goLight = () => {
+    return {
+        type: "GO_LIGHT",
+        payload: {}
+    }
+}
+
+export { goDark, goLight };
