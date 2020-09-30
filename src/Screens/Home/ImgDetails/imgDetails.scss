@@ -14,8 +14,7 @@
         color: $primary;
         padding: 10px;
         position: relative;
-        box-shadow: rgba(0, 0, 0, .3) 2px 2px 5px;
-
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
         img {
             width: 100%;
@@ -29,21 +28,23 @@
             justify-content: space-around;
 
             .author {
-                font-size: 18px;
+                font-size: 20px;
                 font-family: 'Roboto';
             }
             .size {
                 font-size: 13px;
                 font-family: 'Nunito';
             }
-            a {
+            .download {
                 text-decoration: none;
+                border: 1px solid $primary;
                 h2 {
                     font-size: 15px;
                     font-family: 'Roboto';
+                    margin: 0;
                 }
                 &:hover {
-                    color: $secondary;
+                    color: white;
                     cursor: pointer;
                 }
             }
@@ -72,19 +73,22 @@
     @include atDarkTheme {
         .detailsContainer {
             background-color: black;
-            color: $secondary;
-            a {
-                color: $secondary;
-                &:hover {
-                    color: $primary;
+            color: white;
+            .imgData{
+                .download {
+                    background-color: $primary;
+                    color: white;
+                    &:hover {
+                        background-color: black;
+                    }
                 }
-            }
-            .closeModal {
-                color: black;
-                background-color: $secondary;
-                &:hover {
-                    color: $secondary;
-                    background-color: black;
+                .closeModal {
+                    color: black;
+                    background-color: $secondary;
+                    &:hover {
+                        color: $secondary;
+                        background-color: black;
+                    }
                 }
             }
         }

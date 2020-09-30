@@ -18,7 +18,7 @@ function ImgDetails (photo) {
                 <div className="imgData">
                     <h2 className="author">{onePhoto.author}</h2>
                     <h2 className="size"> • Tamaño original: {onePhoto.height}px x {onePhoto.width}px • </h2>
-                    <a target="blank" href={onePhoto.url}><h2>Descargar</h2></a>
+                    <a className="button download" target="blank" href={onePhoto.url}><h2>Descargar</h2></a>
                 </div>
             </div>
         </div></Link>

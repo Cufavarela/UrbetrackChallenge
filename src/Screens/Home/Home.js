@@ -19,6 +19,10 @@ function Home () {
         setModalIsOpen(true);
     }
 
+    useEffect(() => {
+        document.body.style.overflow = modalIsOpen ? "hidden" : "auto";
+    }, [modalIsOpen])
+
     const photosState = useSelector(state => state.Photos);
     const { photos, loading } = photosState;
     const dispatch = useDispatch();
@@ -48,7 +52,7 @@ function Home () {
                         </li>
                     )}
                     <li className="item more" onClick={morePhotos}>
-                        ➕
+                        <h3> + </h3>
                     </li>
                 </ul>
             </div>

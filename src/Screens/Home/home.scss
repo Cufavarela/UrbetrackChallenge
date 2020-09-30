@@ -24,12 +24,13 @@
         padding-left: 190px;
         list-style-type: none;
         box-sizing: border-box;
+        min-height: 100vh;
 
         .item {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.589) 2px 2px 5px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
             background-color: ligthen($primary, 8);
             &:nth-child(2n+3) {
                 grid-row: span 2;
@@ -42,11 +43,15 @@
                 font-size: 50px;
                 cursor: pointer;
                 transition: ease-in-out 400ms;
-                background-color: $secondary;
+                background-color: $primary;
+                font-family: 'Roboto';
+                color: white;
+                font-size: 100px;
+
 
                 &:hover {
-                    background-color: $primary;
-                    font-size: 53px;
+                    background-color: lighten($primary, 8);
+                    font-size: 105px;
                 }
 
             }
@@ -93,7 +98,10 @@
                     background: rgba(0, 0, 0, 0.5);
                 }
                 &.more {
-                    background-color: darken($secondary, 9);
+                    background-color: rgb(36, 5, 56);
+                    &:hover {
+                        background-color: lighten(rgb(36, 5, 56), 8);
+                    }
                 }
             }
         }
