@@ -2,12 +2,14 @@
 
 _Ejercicio realizado para entrevista como React Developer_
 
-## Consigna 🛠️
+Deployment en Netlify: (https://urbetrack-challenge.netlify.app/)
 
-La aplicación requiere las siguientes vistas: 
+## Challenge 🛠️
+
+La aplicación requiere las siguientes vistas:
 1.	Pantalla de inicio “Login”.
 2.	Home (listado). <br>
-  a.	Detalle.  
+  a.	Detalle.
 3.	Navigation Drawer (menú lateral izquierdo) .
 
 
